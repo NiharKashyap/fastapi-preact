@@ -15,4 +15,23 @@ class Author(BaseModel):
 
     class Config:
         orm_mode = True
-        
+
+class UserRequest(BaseModel):
+    id:int
+    uname :str
+    fname :str
+    lname :str
+    # date_created: int
+
+    class Config:
+        orm_mode = True
+
+class UserResponse(BaseModel):
+    id:int
+    uname :str
+    fname :str
+    lname :str
+    date_created: str
+
+    class Config:
+        orm_mode = True
