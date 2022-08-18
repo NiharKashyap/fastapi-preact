@@ -1,5 +1,6 @@
 # build a schema using pydantic
 from pydantic import BaseModel
+import datetime
 
 class Book(BaseModel):
     title: str
@@ -17,7 +18,7 @@ class Author(BaseModel):
         orm_mode = True
 
 class UserRequest(BaseModel):
-    id:int
+    # id:int
     uname :str
     fname :str
     lname :str
@@ -31,7 +32,7 @@ class UserResponse(BaseModel):
     uname :str
     fname :str
     lname :str
-    date_created: str
+    date_created: datetime.date
 
     class Config:
         orm_mode = True
